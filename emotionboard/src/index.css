@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply transition-colors duration-300;
+  }
+  
+  body {
+    @apply bg-zinc-950 text-white font-sans;
+    transition: background 0.5s ease-in-out;
+  }
+  
+  body.calm {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+  
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Improved focus styles */
+  :focus {
+    @apply outline-none ring-2 ring-indigo-500/50;
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Card styling */
+  .card {
+    @apply bg-zinc-900/80 backdrop-blur-sm border border-zinc-800 rounded-xl shadow-xl;
+  }
+  
+  /* Button styling */
+  .btn {
+    @apply px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95;
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500;
+  }
+}

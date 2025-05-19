@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-8 py-8 bg-gray-50 border-4 border-red-500;
+  }
+
+  .header {
+    @apply flex justify-between items-center py-6 mb-8 border-b-2 border-pastelBlue;
+  }
+
+  .header h1 {
+    @apply text-5xl font-extrabold text-blue-600;
+  }
+
+  .card {
+    @apply bg-yellow-200 border-4 border-green-500 rounded-custom p-8 mb-6 shadow-custom;
+  }
+
+  .btn {
+    @apply px-6 py-3 rounded-full font-semibold transition-all duration-300 inline-flex items-center justify-center gap-2;
+  }
+
+  .btn-primary {
+    @apply bg-pastelPurple text-purple-700 shadow-custom hover:bg-purple-100 hover:translate-y-[-2px];
+  }
+
+  .emotion-card {
+    @apply text-center bg-pastelPink rounded-custom p-10 cursor-pointer transition-all duration-300 relative overflow-hidden border border-gray-100;
+  }
+
+  .emotion-card.selected {
+    @apply shadow-[0_0_0_3px_var(--pastel-purple),0_8px_24px_var(--shadow)] scale-[1.02];
+  }
+
+  .emotion-card:hover {
+    @apply translate-y-[-5px] shadow-[0_12px_32px_var(--shadow)];
+  }
+
+  .emotion-icon {
+    @apply text-5xl mb-6;
+  }
+
+  .emotion-card h3 {
+    @apply mb-3 text-xl font-semibold text-textPrimary;
+  }
+
+  .emotion-card p {
+    @apply text-textSecondary text-base;
+  }
+
+  .form-group {
+    @apply mb-8;
+  }
+
+  .form-group label {
+    @apply block mb-3 font-semibold text-textPrimary text-lg;
+  }
+
+  .form-control {
+    @apply w-full p-4 border-2 border-gray-200 rounded-custom font-sans transition-all duration-300 text-base bg-gray-50;
+  }
+
+  .form-control:focus {
+    @apply outline-none border-pastelPurple bg-white shadow-[0_0_0_3px_rgba(107,77,179,0.1)];
+  }
+
+  .mood-badge {
+    @apply inline-flex items-center gap-3 px-5 py-3 rounded-full mt-6 text-base font-semibold relative overflow-hidden shadow-custom;
+  }
+
+  .mood-badge.happy {
+    @apply bg-pastelGreen text-green-800;
+  }
+
+  .mood-badge.sad {
+    @apply bg-pastelBlue text-blue-800;
+  }
+
+  .mood-badge.angry {
+    @apply bg-red-100 text-red-800;
+  }
+
+  .mood-badge.neutral {
+    @apply bg-pastelYellow text-yellow-800;
+  }
+
+  .tags-input-wrapper {
+    @apply flex flex-wrap border-2 border-gray-200 rounded-custom p-3 bg-white min-h-[50px] items-center transition-all duration-300;
+  }
+
+  .tags-input-wrapper:focus-within {
+    @apply border-pastelPurple shadow-[0_0_0_3px_rgba(107,77,179,0.1)];
+  }
+
+  .tag-chip {
+    @apply flex items-center bg-pastelPurple text-purple-700 px-3 py-2 rounded-full text-sm font-medium shadow-[0_2px_8px_rgba(107,77,179,0.15)];
+  }
+} 
